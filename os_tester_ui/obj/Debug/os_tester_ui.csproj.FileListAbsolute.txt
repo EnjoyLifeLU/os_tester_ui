@@ -1,0 +1,11 @@
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.pdb
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\bin\Debug\HZH_Controls.dll
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csprojResolveAssemblyReference.cache
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.Form1.resources
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.Properties.Resources.resources
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.GenerateResource.Cache
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.exe
+D:\Code\CSharp\WinForm\demo\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.pdb
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.exe
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.pdb
