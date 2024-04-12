@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btnSiteBk1 = new System.Windows.Forms.Button();
             this.btnSiteBk2 = new System.Windows.Forms.Button();
@@ -66,13 +67,17 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSiteBk1
             // 
-            this.btnSiteBk1.BackColor = System.Drawing.Color.Silver;
+            this.btnSiteBk1.BackColor = System.Drawing.Color.White;
             this.btnSiteBk1.Enabled = false;
             this.btnSiteBk1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnSiteBk1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -190,6 +195,7 @@
             this.btnSite1.TabIndex = 9;
             this.btnSite1.Text = "1";
             this.btnSite1.UseVisualStyleBackColor = false;
+            this.btnSite1.Click += new System.EventHandler(this.btnSite1_Click);
             // 
             // btnSite3
             // 
@@ -206,6 +212,7 @@
             this.btnSite3.TabIndex = 9;
             this.btnSite3.Text = "3";
             this.btnSite3.UseVisualStyleBackColor = false;
+            this.btnSite3.Click += new System.EventHandler(this.btnSite3_Click);
             // 
             // btnSite2
             // 
@@ -222,6 +229,7 @@
             this.btnSite2.TabIndex = 10;
             this.btnSite2.Text = "2";
             this.btnSite2.UseVisualStyleBackColor = false;
+            this.btnSite2.Click += new System.EventHandler(this.btnSite2_Click);
             // 
             // btnSite4
             // 
@@ -238,6 +246,7 @@
             this.btnSite4.TabIndex = 11;
             this.btnSite4.Text = "4";
             this.btnSite4.UseVisualStyleBackColor = false;
+            this.btnSite4.Click += new System.EventHandler(this.btnSite4_Click);
             // 
             // btnSite6
             // 
@@ -254,6 +263,7 @@
             this.btnSite6.TabIndex = 12;
             this.btnSite6.Text = "6";
             this.btnSite6.UseVisualStyleBackColor = false;
+            this.btnSite6.Click += new System.EventHandler(this.btnSite6_Click);
             // 
             // btnSite5
             // 
@@ -270,6 +280,7 @@
             this.btnSite5.TabIndex = 12;
             this.btnSite5.Text = "5";
             this.btnSite5.UseVisualStyleBackColor = false;
+            this.btnSite5.Click += new System.EventHandler(this.btnSite5_Click);
             // 
             // btnSite7
             // 
@@ -286,6 +297,7 @@
             this.btnSite7.TabIndex = 13;
             this.btnSite7.Text = "7";
             this.btnSite7.UseVisualStyleBackColor = false;
+            this.btnSite7.Click += new System.EventHandler(this.btnSite7_Click);
             // 
             // btnSite8
             // 
@@ -302,6 +314,7 @@
             this.btnSite8.TabIndex = 14;
             this.btnSite8.Text = "8";
             this.btnSite8.UseVisualStyleBackColor = false;
+            this.btnSite8.Click += new System.EventHandler(this.btnSite8_Click);
             // 
             // checkBox1
             // 
@@ -312,6 +325,7 @@
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 15;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -322,6 +336,7 @@
             this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 16;
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -332,6 +347,7 @@
             this.checkBox3.Size = new System.Drawing.Size(18, 17);
             this.checkBox3.TabIndex = 17;
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -342,6 +358,7 @@
             this.checkBox4.Size = new System.Drawing.Size(18, 17);
             this.checkBox4.TabIndex = 18;
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -352,6 +369,7 @@
             this.checkBox5.Size = new System.Drawing.Size(18, 17);
             this.checkBox5.TabIndex = 19;
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox6
             // 
@@ -362,6 +380,7 @@
             this.checkBox6.Size = new System.Drawing.Size(18, 17);
             this.checkBox6.TabIndex = 20;
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // checkBox7
             // 
@@ -372,6 +391,7 @@
             this.checkBox7.Size = new System.Drawing.Size(18, 17);
             this.checkBox7.TabIndex = 21;
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // checkBox8
             // 
@@ -382,6 +402,7 @@
             this.checkBox8.Size = new System.Drawing.Size(18, 17);
             this.checkBox8.TabIndex = 22;
             this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // checkBox9
             // 
@@ -569,6 +590,29 @@
             this.richTextBox2.TabStop = false;
             this.richTextBox2.Text = "";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CheckToolStripMenuItem,
+            this.logToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(176, 80);
+            // 
+            // CheckToolStripMenuItem
+            // 
+            this.CheckToolStripMenuItem.Name = "CheckToolStripMenuItem";
+            this.CheckToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.CheckToolStripMenuItem.Text = "Check";
+            this.CheckToolStripMenuItem.Click += new System.EventHandler(this.CheckToolStripMenuItem_Click);
+            // 
+            // logToolStripMenuItem
+            // 
+            this.logToolStripMenuItem.Name = "logToolStripMenuItem";
+            this.logToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.logToolStripMenuItem.Text = "Log";
+            this.logToolStripMenuItem.Click += new System.EventHandler(this.logToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -617,6 +661,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,6 +706,9 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem CheckToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logToolStripMenuItem;
     }
 }
 

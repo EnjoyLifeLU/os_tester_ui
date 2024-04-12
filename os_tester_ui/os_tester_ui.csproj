@@ -35,9 +35,6 @@
     <ApplicationIcon>microchip_38205.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HZH_Controls">
-      <HintPath>..\packages\HZH_Controls.1.0.14\lib\net40\HZH_Controls.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,6 +53,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MPSetupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MPSetupForm.Designer.cs">
+      <DependentUpon>MPSetupForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PwdForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +69,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MPSetupForm.resx">
+      <DependentUpon>MPSetupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,7 +85,6 @@
     <EmbeddedResource Include="PwdForm.resx">
       <DependentUpon>PwdForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
