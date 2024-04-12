@@ -15,6 +15,7 @@ D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe
 D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.pdb
 D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\HZH_Controls.dll
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csprojResolveAssemblyReference.cache
-D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.Form1.resources
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.Properties.Resources.resources
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.GenerateResource.Cache
+D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.PwdForm.resources
+D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.MainForm.resources
