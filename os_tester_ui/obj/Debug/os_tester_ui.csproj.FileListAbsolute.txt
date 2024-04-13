@@ -19,3 +19,11 @@ D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.GenerateRe
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.PwdForm.resources
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.MainForm.resources
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.MPSetupForm.resources
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csprojResolveAssemblyReference.cache
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.MainForm.resources
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.MPSetupForm.resources
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.Properties.Resources.resources
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.PwdForm.resources
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.GenerateResource.Cache
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.pdb

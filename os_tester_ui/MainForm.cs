@@ -104,51 +104,44 @@ namespace os_tester_ui
             SiteOperationSettings(checkBox8, btnSiteBk8);
         }
 
-        private void btnSite1_Click(object sender, MouseEventArgs e)
+        private void btnSite1_Click(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
-            {
-                Button button = sender as Button;
-                if (button != null)
-                {
-                    contextMenuStrip1.Show(button.PointToScreen(e.Location));
-                }
-            }
+            ShowContextMenuStrip(sender, e);
         }
 
         private void btnSite2_Click(object sender, EventArgs e)
         {
-
+            ShowContextMenuStrip(sender, e);
         }
 
         private void btnSite3_Click(object sender, EventArgs e)
         {
-
+            ShowContextMenuStrip(sender, e);
         }
 
         private void btnSite4_Click(object sender, EventArgs e)
         {
-
+            ShowContextMenuStrip(sender, e);
         }
 
         private void btnSite5_Click(object sender, EventArgs e)
         {
-
+            ShowContextMenuStrip(sender, e);
         }
 
         private void btnSite6_Click(object sender, EventArgs e)
         {
-
+            ShowContextMenuStrip(sender, e);
         }
 
         private void btnSite7_Click(object sender, EventArgs e)
         {
-
+            ShowContextMenuStrip(sender, e);
         }
 
         private void btnSite8_Click(object sender, EventArgs e)
         {
-
+            ShowContextMenuStrip(sender, e);
         }
 
         private void CheckToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,12 +158,21 @@ namespace os_tester_ui
         {
             if (checkBox.Checked)
             {
-                button.BackColor = Color.Silver;
+                button.BackColor = Color.White;
             }
             else
             {
-                button.BackColor = Color.White;
+                button.BackColor = Color.Silver;
             }
+        }
+
+        private void ShowContextMenuStrip(object sender, EventArgs e)
+        {
+            // 获取鼠标点击位置
+            Point point = this.PointToClient(Control.MousePosition);
+
+            // 在点击位置显示 ContextMenuStrip
+            contextMenuStrip1.Show(this, point);
         }
 
     }
