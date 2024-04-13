@@ -55,12 +55,12 @@
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.btnOption = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.btnAbort = new System.Windows.Forms.Button();
+            this.btnDisconnect = new System.Windows.Forms.Button();
+            this.btnMPActive = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -391,102 +391,102 @@
             this.checkBox9.Text = "ForceConnect";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnCheck
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button1.Location = new System.Drawing.Point(848, 97);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 39);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Check";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCheck.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCheck.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnCheck.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnCheck.Location = new System.Drawing.Point(848, 97);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(77, 39);
+            this.btnCheck.TabIndex = 24;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
-            // button2
+            // btnOption
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Control;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button2.Location = new System.Drawing.Point(848, 142);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 39);
-            this.button2.TabIndex = 25;
-            this.button2.Text = "Option";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnOption.BackColor = System.Drawing.SystemColors.Control;
+            this.btnOption.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnOption.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnOption.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOption.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOption.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnOption.Location = new System.Drawing.Point(848, 142);
+            this.btnOption.Name = "btnOption";
+            this.btnOption.Size = new System.Drawing.Size(77, 39);
+            this.btnOption.TabIndex = 25;
+            this.btnOption.Text = "Option";
+            this.btnOption.UseVisualStyleBackColor = false;
+            this.btnOption.Click += new System.EventHandler(this.btnOption_Click);
             // 
-            // button3
+            // btnRun
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Control;
-            this.button3.Enabled = false;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button3.Location = new System.Drawing.Point(848, 187);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(77, 39);
-            this.button3.TabIndex = 26;
-            this.button3.Text = "Run";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRun.BackColor = System.Drawing.SystemColors.Control;
+            this.btnRun.Enabled = false;
+            this.btnRun.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnRun.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnRun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRun.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRun.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnRun.Location = new System.Drawing.Point(848, 187);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(77, 39);
+            this.btnRun.TabIndex = 26;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = false;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
-            // button5
+            // btnAbort
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Control;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button5.Location = new System.Drawing.Point(848, 232);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(77, 39);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "Abort";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnAbort.BackColor = System.Drawing.SystemColors.Control;
+            this.btnAbort.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnAbort.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnAbort.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbort.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbort.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnAbort.Location = new System.Drawing.Point(848, 232);
+            this.btnAbort.Name = "btnAbort";
+            this.btnAbort.Size = new System.Drawing.Size(77, 39);
+            this.btnAbort.TabIndex = 27;
+            this.btnAbort.Text = "Abort";
+            this.btnAbort.UseVisualStyleBackColor = false;
+            this.btnAbort.Click += new System.EventHandler(this.btnAbort_Click);
             // 
-            // button6
+            // btnDisconnect
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.Control;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.ForestGreen;
-            this.button6.Location = new System.Drawing.Point(848, 277);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(77, 39);
-            this.button6.TabIndex = 28;
-            this.button6.Text = "Disconnect";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnDisconnect.BackColor = System.Drawing.SystemColors.Control;
+            this.btnDisconnect.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnDisconnect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnDisconnect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDisconnect.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisconnect.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnDisconnect.Location = new System.Drawing.Point(848, 277);
+            this.btnDisconnect.Name = "btnDisconnect";
+            this.btnDisconnect.Size = new System.Drawing.Size(77, 39);
+            this.btnDisconnect.TabIndex = 28;
+            this.btnDisconnect.Text = "Disconnect";
+            this.btnDisconnect.UseVisualStyleBackColor = false;
+            this.btnDisconnect.Click += new System.EventHandler(this.btnDisconnect_Click);
             // 
-            // button7
+            // btnMPActive
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.Control;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Navy;
-            this.button7.Location = new System.Drawing.Point(848, 322);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(77, 39);
-            this.button7.TabIndex = 29;
-            this.button7.Text = "MP Active";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnMPActive.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMPActive.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnMPActive.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleTurquoise;
+            this.btnMPActive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMPActive.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMPActive.ForeColor = System.Drawing.Color.Navy;
+            this.btnMPActive.Location = new System.Drawing.Point(848, 322);
+            this.btnMPActive.Name = "btnMPActive";
+            this.btnMPActive.Size = new System.Drawing.Size(77, 39);
+            this.btnMPActive.TabIndex = 29;
+            this.btnMPActive.Text = "MP Active";
+            this.btnMPActive.UseVisualStyleBackColor = false;
+            this.btnMPActive.Click += new System.EventHandler(this.btnMPActive_Click);
             // 
             // tabControl1
             // 
@@ -504,7 +504,7 @@
             this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(697, 111);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Option Setup";
@@ -526,7 +526,7 @@
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(697, 111);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "MP Info";
@@ -536,7 +536,7 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(697, 111);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hnadler(GPIB)";
@@ -583,12 +583,12 @@
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(938, 658);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMPActive);
+            this.Controls.Add(this.btnDisconnect);
+            this.Controls.Add(this.btnAbort);
+            this.Controls.Add(this.btnRun);
+            this.Controls.Add(this.btnOption);
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.checkBox9);
             this.Controls.Add(this.checkBox8);
             this.Controls.Add(this.checkBox7);
@@ -656,12 +656,12 @@
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.Button btnOption;
+        private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.Button btnAbort;
+        private System.Windows.Forms.Button btnDisconnect;
+        private System.Windows.Forms.Button btnMPActive;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;

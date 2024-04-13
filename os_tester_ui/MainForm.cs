@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace os_tester_ui
 {
@@ -24,12 +25,16 @@ namespace os_tester_ui
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCheck_Click(object sender, EventArgs e)
         {
-
+            var con = new SQLiteConnection("Data Source=TestSqlite.sqlite");//创建连接
+            con.Open();
+            var cmd = new SQLiteCommand("SELECT SQLITE_VERSION()", con);//查看版本
+            string version = cmd.ExecuteScalar().ToString();
+            MessageBox.Show("SQLite version:" + version); 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnOption_Click(object sender, EventArgs e)
         {
             PwdForm pwdForm = new PwdForm();
             pwdForm.StartPosition = FormStartPosition.Manual;
@@ -39,22 +44,22 @@ namespace os_tester_ui
             pwdForm.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnRun_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnAbort_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnDisconnect_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnMPActive_Click(object sender, EventArgs e)
         {
             MPSetupForm mpSetupForm = new MPSetupForm();
             mpSetupForm.StartPosition = FormStartPosition.Manual;
@@ -174,6 +179,7 @@ namespace os_tester_ui
             // 在点击位置显示 ContextMenuStrip
             contextMenuStrip1.Show(this, point);
         }
+
 
     }
 }

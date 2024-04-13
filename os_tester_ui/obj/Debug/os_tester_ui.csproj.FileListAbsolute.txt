@@ -27,3 +27,5 @@ D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.PwdForm.
 D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.GenerateResource.Cache
 D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe
 D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.pdb
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\System.Data.SQLite.dll
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\System.Data.SQLite.xml
