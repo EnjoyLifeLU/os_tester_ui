@@ -27,10 +27,8 @@ namespace os_tester_ui
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            var con = new SQLiteConnection("Data Source=TestSqlite.sqlite");//创建连接
-            con.Open();
-            var cmd = new SQLiteCommand("SELECT SQLITE_VERSION()", con);//查看版本
-            string version = cmd.ExecuteScalar().ToString();
+            var con = new SQLiteHelper("TestSqlite.sqlite");//创建连接
+            var version = con.GetSqlResult("SELECT SQLITE_VERSION()");
             MessageBox.Show("SQLite version:" + version); 
         }
 
@@ -51,7 +49,7 @@ namespace os_tester_ui
 
         private void btnAbort_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
@@ -179,7 +177,5 @@ namespace os_tester_ui
             // 在点击位置显示 ContextMenuStrip
             contextMenuStrip1.Show(this, point);
         }
-
-
     }
 }

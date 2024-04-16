@@ -7,33 +7,6 @@ namespace os_tester_ui
 {
     class DataSource
     {
-        // 枚举 SiteStatus，表示站点的状态
-        public enum SiteNumber
-        {
-            Site1 = 1,
-            Site2 = 2,
-            Site3 = 3,
-            Site4 = 4,
-            Site5 = 5,
-            Site6 = 6,
-            Site7 = 7,
-            Site8 = 8
-        }
-
-        // 枚举 SiteStatus，表示站点的状态
-        public enum SiteStatus
-        {
-            Closed = 0, // 关闭
-            Open   = 1  // 开启
-        }
-
-        // 枚举 TestResult，表示测试结果
-        public enum TestResult
-        {
-            Fail = 0, // 失败
-            Pass = 1  // 通过
-        }
-
         public class AllSite
         {
             public int SiteCount { get; set; }
@@ -41,11 +14,35 @@ namespace os_tester_ui
             public int AllSiteResult { get; set; }
         }
 
+        public enum SiteNumber
+        {
+            Site1 = 1,
+            Site2,
+            Site3,
+            Site4,
+            Site5,
+            Site6,
+            Site7,
+            Site8
+        }
+
+        public enum SiteStatus
+        {
+            Closed = 0,
+            Open = 1
+        }
+
+        public enum SiteResult
+        {
+            Fail = 0,
+            Pass = 1
+        }
+
         public class Site
         {
-            public int SiteNumber { get; set; }
-            public int SiteStatus { get; set; }
-            public int SiteResult { get; set; }
+            public SiteNumber number { get; set; }
+            public SiteStatus status { get; set; }
+            public SiteResult result { get; set; }
         }
 
         public interface ISiteDataSource
