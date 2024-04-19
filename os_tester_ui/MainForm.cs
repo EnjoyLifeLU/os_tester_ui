@@ -27,7 +27,7 @@ namespace os_tester_ui
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            var con = new SQLiteHelper("TestSqlite.sqlite");//创建连接
+            var con = new MdbHelper("D:\tmp\\FACETDemo.sqlite");//创建连接
             var version = con.GetSqlResult("SELECT SQLITE_VERSION()");
             MessageBox.Show("SQLite version:" + version); 
         }

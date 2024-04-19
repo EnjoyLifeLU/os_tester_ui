@@ -16,7 +16,7 @@ namespace os_tester_ui
         /// <summary>
         /// 初始化连接数据库
         /// </summary>
-        /// <param name="address"></param>
+        /// <param name="dbFilePath">数据库文件路径</param>
         public MdbHelper(string dbFilePath)
         {
             try
@@ -272,7 +272,7 @@ namespace os_tester_ui
         /// </summary>
         /// <param name="sql">SQL 命令</param>
         /// <returns>执行结果</returns>
-        public string ExecuteScalar(string sql)
+        public string GetSqlResult(string sql)
         {
             try
             {
