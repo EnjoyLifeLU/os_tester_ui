@@ -35,3 +35,7 @@ D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\Interop.ADOX.dll
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.ResolveComReference.cache
 D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\Interop.ADOX.dll
 D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe.config
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe.config
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\Interop.ADOX.dll
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.ResolveComReference.cache
+D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\Interop.ADOX.dll

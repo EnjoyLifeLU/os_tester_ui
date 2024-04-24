@@ -87,7 +87,8 @@
     <Compile Include="Logger\LoggerExtensions.cs" />
     <Compile Include="Logger\LogLevel.cs" />
     <Compile Include="Protocol\GpibCore.cs" />
-    <Compile Include="Protocol\IGpib.cs" />
+    <Compile Include="Protocol\IPort.cs" />
+    <Compile Include="Protocol\Port.cs" />
     <Compile Include="Protocol\visa32.cs" />
     <Compile Include="Resouce\DataSource.cs" />
     <Compile Include="MainForm.cs">

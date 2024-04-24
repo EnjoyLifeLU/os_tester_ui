@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace os_tester_ui.Protocol
 {
     /// <summary>
-    /// GPIB接口
+    /// Port接口
     /// </summary>
-    public interface IGpib
+    public interface IPort
     {
-        int Connect(int Address);
+        int Connect();
         void Close();
         int Send(string Command);
         int Read(string Command, out string Buf);
