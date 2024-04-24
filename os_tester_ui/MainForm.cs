@@ -6,12 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
+
+using os_tester_ui.DB;
+using os_tester_ui.Logger;
+using os_tester_ui.Protocol;
+using os_tester_ui.Resouce;
 
 namespace os_tester_ui
 {
     public partial class MainForm : Form
     {
+        FileLogger logger = new FileLogger();
+        ConsoleLogger logger2 = new ConsoleLogger();
+
         public MainForm()
         {
             InitializeComponent();
@@ -27,9 +34,9 @@ namespace os_tester_ui
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            var con = new MdbHelper("D:\tmp\\FACETDemo.sqlite");//创建连接
-            var version = con.GetSqlResult("SELECT SQLITE_VERSION()");
-            MessageBox.Show("SQLite version:" + version); 
+            var con = new SQLiteHelper("TestSqlite.sqlite");//创建连接
+            var result = con.GetSqlResult("SELECT SQLITE_VERSION()");
+            MessageBox.Show(result); 
         }
 
         private void btnOption_Click(object sender, EventArgs e)
@@ -49,12 +56,13 @@ namespace os_tester_ui
 
         private void btnAbort_Click(object sender, EventArgs e)
         {
-            
+            logger.Info("Info");
+            logger2.Info("Info");
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
-
+            //GpibCore gpibConn = new GpibCore();
         }
 
         private void btnMPActive_Click(object sender, EventArgs e)

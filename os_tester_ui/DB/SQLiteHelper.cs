@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.IO;
 
-namespace os_tester_ui
+namespace os_tester_ui.DB
 {
     public class SQLiteHelper
     {

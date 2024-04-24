@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace os_tester_ui
+namespace os_tester_ui.DB
 {
     public class MdbHelper
     {
