@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using os_tester_ui.Resouce;
+
 namespace os_tester_ui
 {
     public partial class MPSetupForm : Form
@@ -18,7 +20,7 @@ namespace os_tester_ui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            //FormActive.SiteOperationSettings(MainForm.checkBox1, MainForm.btnSiteBk1);
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -11,9 +11,9 @@ namespace os_tester_ui.Protocol
     /// </summary>
     public interface IPort
     {
-        int Connect();
+        void Connect();
         void Close();
-        int Send(string Command);
-        int Read(string Command, out string Buf);
+        void Send(string Command);
+        string Read();
     }
 }

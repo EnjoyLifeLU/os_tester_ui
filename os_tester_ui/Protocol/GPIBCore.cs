@@ -4,64 +4,120 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using os_tester_ui.Logger;
+
 namespace os_tester_ui.Protocol
 {
     public class GpibCore : Prot
     {
         public int Address { get; set; }
+        public int Timeout { get; set; }
+        public int BufSize { get; set; }
+
+        private string msg;
+
+        // TODO： 与日志类耦合，需要改进
+        private FileLogger GpibLog = new FileLogger("logs\\gpiblog");
 
         public GpibCore(int address)
         {
             Address = address;
+            Timeout = 2000;
+            BufSize = 1024;
         }
 
         private int DefaultSessionId = 0;
         private int SessionId = 0;
 
-        public override int Connect()
+        public override void Connect()
         {
-            int status = 0;
-
             //Session Open
-            status = visa32.viOpenDefaultRM(out DefaultSessionId);
+            int result = visa32.viOpenDefaultRM(out DefaultSessionId);
+            if (result != 0)
+            {
+                msg = "Failed to viOpenDefaultRM.";
+                GpibLog.Error(msg);
+                throw new InvalidOperationException(msg);
+            }
 
             //Connection Open
-            status = visa32.viOpen(DefaultSessionId,
-                "GPIB::" + this.Address.ToString() + "::INSTR", 0, 0, out SessionId);
+            result = visa32.viOpen(DefaultSessionId,
+                "GPIB0::" + this.Address.ToString() + "::INSTR", 0, 0, out SessionId);
+            if (result != 0)
+            {
+                msg = "Failed to viOpen.";
+                GpibLog.Error(msg);
+                throw new InvalidOperationException(msg);
+            }
 
-            // Set the termination character to carriage return (i.e., 13);
-            status = visa32.viSetAttribute(SessionId, visa32.VI_ATTR_TERMCHAR, 13);
-            // Set the flag to terminate when receiving a termination character
-            status = visa32.viSetAttribute(SessionId, visa32.VI_ATTR_TERMCHAR_EN, 1);
+            //// Set the termination character to carriage return (i.e., 13);
+            //visa32.viSetAttribute(SessionId, visa32.VI_ATTR_TERMCHAR, 13);
+            //// Set the flag to terminate when receiving a termination character
+            //visa32.viSetAttribute(SessionId, visa32.VI_ATTR_TERMCHAR_EN, 1);
             // Set timeout in milliseconds; set the timeout for your requirements
-            status = visa32.viSetAttribute(SessionId, visa32.VI_ATTR_TMO_VALUE, 2000);
-
-            return status;
+            result = visa32.viSetAttribute(SessionId, visa32.VI_ATTR_TMO_VALUE, Timeout);
+            if (result != 0)
+            {
+                msg = "Failed to set timeout.";
+                GpibLog.Error(msg);
+                throw new InvalidOperationException(msg);
+            }
         }
 
         public override void Close()
         {
-            visa32.viClose(SessionId);
+            int result = visa32.viClose(SessionId);
+
+            if (result != 0)
+            {
+                msg = "Failed to Close.";
+                GpibLog.Error(msg);
+                throw new InvalidOperationException(msg);
+            }
         }
 
-        public override int Send(string Command)
+        public override void Send(string Command)
         {
-            int status = 0;
-
             //Communication
-            status = visa32.viPrintf(SessionId, Command + "\n");//device specific commands to write
-            StringBuilder message = new StringBuilder(2048);
-            status = visa32.viScanf(SessionId, "%2048t", message);//Readback
+            int result = visa32.viPrintf(SessionId, Command + "\n");
 
-            return status;
+            if (result != 0)
+            {
+                msg = "Failed to Send.";
+                GpibLog.Error(msg);
+                throw new InvalidOperationException(msg);
+            }
         }
 
-        public override int Read(string Command, out string Buf)
+        public override string Read()
         {
-            int status = 0;
+            string buffer;
 
-            //Communication
-            status = visa32.viRead(SessionId, out Buf, 1024);//device specific commands to write
+            int result = visa32.viRead(SessionId, out buffer, BufSize);
+
+            if (result != 0)
+            {
+                msg = "Failed to Read.";
+                GpibLog.Error(msg);
+                throw new InvalidOperationException(msg);
+            }
+
+            return buffer;
+        }
+
+        public short ReadSTB()
+        {
+            short status = 0; // 用于存储状态字节的变量
+
+            // 调用 viReadSTB 函数读取状态字节
+            int result = visa32.viReadSTB(SessionId, ref status);
+
+            if (result != 0)
+            {
+                msg = "Failed to read status byte.";
+                GpibLog.Error(msg);
+                throw new InvalidOperationException(msg);
+            }
 
             return status;
         }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+using os_tester_ui.Data;
 using os_tester_ui.DB;
 using os_tester_ui.Logger;
 using os_tester_ui.Protocol;
@@ -16,12 +17,48 @@ namespace os_tester_ui
 {
     public partial class MainForm : Form
     {
-        FileLogger logger = new FileLogger();
-        ConsoleLogger logger2 = new ConsoleLogger();
+        FileLogger logger = new FileLogger("logs\\uilog");
+        GpibCore gpibConn = new GpibCore(5);
+
+        SiteData site1 = new SiteData();
+        SiteData site2 = new SiteData();
+        SiteData site3 = new SiteData();
+        SiteData site4 = new SiteData();
+        SiteData site5 = new SiteData();
+        SiteData site6 = new SiteData();
+        SiteData site7 = new SiteData();
+        SiteData site8 = new SiteData();
 
         public MainForm()
         {
             InitializeComponent();
+
+            btnSiteBk1.DataBindings.Add("BackColor", site1, "StatusColor");
+            btnSiteBk2.DataBindings.Add("BackColor", site2, "StatusColor");
+            btnSiteBk3.DataBindings.Add("BackColor", site3, "StatusColor");
+            btnSiteBk4.DataBindings.Add("BackColor", site4, "StatusColor");
+            btnSiteBk5.DataBindings.Add("BackColor", site5, "StatusColor");
+            btnSiteBk6.DataBindings.Add("BackColor", site6, "StatusColor");
+            btnSiteBk7.DataBindings.Add("BackColor", site7, "StatusColor");
+            btnSiteBk8.DataBindings.Add("BackColor", site8, "StatusColor");
+
+            btnSiteBk1.DataBindings.Add("Text", site1, "BinText");
+            btnSiteBk2.DataBindings.Add("Text", site2, "BinText");
+            btnSiteBk3.DataBindings.Add("Text", site3, "BinText");
+            btnSiteBk4.DataBindings.Add("Text", site4, "BinText");
+            btnSiteBk5.DataBindings.Add("Text", site5, "BinText");
+            btnSiteBk6.DataBindings.Add("Text", site6, "BinText");
+            btnSiteBk7.DataBindings.Add("Text", site7, "BinText");
+            btnSiteBk8.DataBindings.Add("Text", site8, "BinText");
+
+            site1.Status = TestStatus.On;
+            site2.Status = TestStatus.On;
+            site3.Status = TestStatus.Off;
+            site4.Status = TestStatus.Off;
+            site5.Status = TestStatus.Off;
+            site6.Status = TestStatus.Off;
+            site7.Status = TestStatus.Off;
+            site8.Status = TestStatus.Off;
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -34,9 +71,8 @@ namespace os_tester_ui
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            var con = new SQLiteHelper("TestSqlite.sqlite");//创建连接
-            var result = con.GetSqlResult("SELECT SQLITE_VERSION()");
-            MessageBox.Show(result); 
+            site1.SBin = SoftBin.Bin1;
+            site2.Result = TestResult.NoTest;
         }
 
         private void btnOption_Click(object sender, EventArgs e)
@@ -57,12 +93,24 @@ namespace os_tester_ui
         private void btnAbort_Click(object sender, EventArgs e)
         {
             logger.Info("Info");
-            logger2.Info("Info");
+
+            //var con = new SQLiteHelper("TestSqlite.sqlite");//创建连接
+            //var result = con.GetSqlResult("SELECT SQLITE_VERSION()");
+            //MessageBox.Show(result); 
         }
 
         private void btnDisconnect_Click(object sender, EventArgs e)
         {
-            //GpibCore gpibConn = new GpibCore();
+            try
+            {
+                gpibConn.Connect();
+                short sqr = gpibConn.ReadSTB();
+                MessageBox.Show(sqr.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void btnMPActive_Click(object sender, EventArgs e)
@@ -75,84 +123,44 @@ namespace os_tester_ui
             mpSetupForm.ShowDialog();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox1, btnSiteBk1);
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox2, btnSiteBk2);
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox3, btnSiteBk3);
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox4, btnSiteBk4);
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox5, btnSiteBk5);
-        }
-
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox6, btnSiteBk6);
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox7, btnSiteBk7);
-        }
-
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-            SiteOperationSettings(checkBox8, btnSiteBk8);
-        }
-
         private void btnSite1_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void btnSite2_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void btnSite3_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void btnSite4_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void btnSite5_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void btnSite6_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void btnSite7_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void btnSite8_Click(object sender, EventArgs e)
         {
-            ShowContextMenuStrip(sender, e);
+            FormActive.ShowContextMenuStrip(this, contextMenuStrip1);
         }
 
         private void CheckToolStripMenuItem_Click(object sender, EventArgs e)
@@ -163,27 +171,6 @@ namespace os_tester_ui
         private void logToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Option Log selected");
-        }
-
-        private void SiteOperationSettings(CheckBox checkBox, Button button)
-        {
-            if (checkBox.Checked)
-            {
-                button.BackColor = Color.White;
-            }
-            else
-            {
-                button.BackColor = Color.Silver;
-            }
-        }
-
-        private void ShowContextMenuStrip(object sender, EventArgs e)
-        {
-            // 获取鼠标点击位置
-            Point point = this.PointToClient(Control.MousePosition);
-
-            // 在点击位置显示 ContextMenuStrip
-            contextMenuStrip1.Show(this, point);
         }
     }
 }

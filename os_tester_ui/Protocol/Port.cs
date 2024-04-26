@@ -8,9 +8,9 @@ namespace os_tester_ui.Protocol
 {
     public abstract class Prot : IPort
     {
-        public abstract int Connect();
+        public abstract void Connect();
         public abstract void Close();
-        public abstract int Send(string Command);
-        public abstract int Read(string Command, out string Buf);
+        public abstract void Send(string Command);
+        public abstract string Read();
     }
 }
