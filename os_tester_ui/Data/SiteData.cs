@@ -8,14 +8,21 @@ using System.Drawing;
 
 namespace os_tester_ui.Data
 {
-    public class SiteData : INotifyPropertyChanged
+    public class SiteData : DataBinding
     {
         private TestStatus m_Status;
         private TestResult m_Result = TestResult.NoTest;
         private HardBin m_HBin;
         private SoftBin m_SBin;
-        public Color StatusColor { get; set; }
-        public string BinText { get; set; }
+
+        private TestData m_TestData;
+        public SiteData(TestData testData)
+        {
+            m_TestData = testData;
+        }
+
+        public Color StatusColor { get; private set; }
+        public string BinText { get; private set; }
 
         public TestStatus Status
         {
@@ -31,7 +38,7 @@ namespace os_tester_ui.Data
                         StatusColor = Color.White;
                         break;
                     case TestStatus.Off:
-                        StatusColor = Color.LightGray;
+                        StatusColor = Color.DarkGray;
                         break;
                     default:
                         break;
@@ -51,19 +58,21 @@ namespace os_tester_ui.Data
 
                 if (m_Status == TestStatus.On && m_Result == TestResult.NoTest)
                 {
-                    StatusColor = Color.DarkGray;
+                    StatusColor = Color.LightGray;
                 }
                 else if (m_Status == TestStatus.On && m_Result == TestResult.Pass)
                 {
                     StatusColor = Color.ForestGreen;
+                    m_TestData.Pass += 1;
                 }
                 else if (m_Status == TestStatus.On && m_Result == TestResult.Fail)
                 {
                     StatusColor = Color.Crimson;
+                    m_TestData.Fail += 1;
                 }
                 else
                 {
-                    StatusColor = Color.LightGray;
+                    StatusColor = Color.DarkGray;
                 }
 
                 NotifyPropertyChanger("StatusColor");
@@ -77,42 +86,50 @@ namespace os_tester_ui.Data
             {
                 m_HBin = value;
 
-                switch (m_HBin)
+                if (m_HBin == HardBin.Bin1 && m_Status == TestStatus.On)
                 {
-                    case HardBin.Bin1:
-                        BinText = "Bin1";
-                        Result = TestResult.Pass;
-                        break;
-                    case HardBin.Bin2:
-                        BinText = "Bin2";
-                        Result = TestResult.Fail;
-                        break;
-                    case HardBin.Bin3:
-                        BinText = "Bin3";
-                        Result = TestResult.Fail;
-                        break;
-                    case HardBin.Bin4:
-                        BinText = "Bin4";
-                        Result = TestResult.Fail;
-                        break;
-                    case HardBin.Bin5:
-                        BinText = "Bin5";
-                        Result = TestResult.Fail;
-                        break;
-                    case HardBin.Bin6:
-                        BinText = "Bin6";
-                        Result = TestResult.Fail;
-                        break;
-                    case HardBin.Bin7:
-                        BinText = "Bin7";
-                        Result = TestResult.Fail;
-                        break;
-                    case HardBin.Bin8:
-                        BinText = "Bin8";
-                        Result = TestResult.Fail;
-                        break;
-                    default:
-                        break;
+                    BinText = "Bin1";
+                    Result = TestResult.Pass;
+                }
+                else if (m_HBin == HardBin.Bin2 && m_Status == TestStatus.On)
+                {
+                    BinText = "Bin2";
+                    Result = TestResult.Fail;
+                }
+                else if (m_HBin == HardBin.Bin3 && m_Status == TestStatus.On)
+                {
+                    BinText = "Bin3";
+                    Result = TestResult.Fail;
+                }
+                else if (m_HBin == HardBin.Bin4 && m_Status == TestStatus.On)
+                {
+                    BinText = "Bin4";
+                    Result = TestResult.Fail;
+                }
+                else if (m_HBin == HardBin.Bin5 && m_Status == TestStatus.On)
+                {
+                    BinText = "Bin5";
+                    Result = TestResult.Fail;
+                }
+                else if (m_HBin == HardBin.Bin6 && m_Status == TestStatus.On)
+                {
+                    BinText = "Bin6";
+                    Result = TestResult.Fail;
+                }
+                else if (m_HBin == HardBin.Bin7 && m_Status == TestStatus.On)
+                {
+                    BinText = "Bin7";
+                    Result = TestResult.Fail;
+                }
+                else if (m_HBin == HardBin.Bin8 && m_Status == TestStatus.On)
+                {
+                    BinText = "Bin8";
+                    Result = TestResult.Fail;
+                }
+                else
+                {
+                    BinText = "";
+                    Result = TestResult.NoTest;
                 }
 
                 NotifyPropertyChanger("BinText");
@@ -153,19 +170,20 @@ namespace os_tester_ui.Data
                         HBin = HardBin.Bin8;
                         break;
                     default:
+                        HBin = HardBin.Bin1001;
                         break;
                 }
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void NotifyPropertyChanger(string propertyName)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }
+        //public event PropertyChangedEventHandler PropertyChanged;
+        //public void NotifyPropertyChanger(string propertyName)
+        //{
+        //    if (PropertyChanged != null)
+        //    {
+        //        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        //    }
+        //}
     }
 
     public enum TestStatus
@@ -191,6 +209,7 @@ namespace os_tester_ui.Data
         Bin6,
         Bin7,
         Bin8,
+        Bin1001
     }
 
     public enum SoftBin
@@ -203,5 +222,6 @@ namespace os_tester_ui.Data
         Bin6,
         Bin7,
         Bin8,
+        Bin1001
     }
 }

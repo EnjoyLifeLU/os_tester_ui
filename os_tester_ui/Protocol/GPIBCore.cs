@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using os_tester_ui.Logger;
+//using os_tester_ui.Logger;
+using TouchSocket.Core;
 
 namespace os_tester_ui.Protocol
 {

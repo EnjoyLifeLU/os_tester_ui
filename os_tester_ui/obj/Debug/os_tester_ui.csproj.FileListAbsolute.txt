@@ -13,7 +13,6 @@ D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.exe
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.pdb
 D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe
 D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.pdb
-D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csprojResolveAssemblyReference.cache
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.Properties.Resources.resources
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.GenerateResource.Cache
 D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.PwdForm.resources
@@ -39,3 +38,10 @@ D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\os_tester_ui.exe.conf
 D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\Interop.ADOX.dll
 D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csproj.ResolveComReference.cache
 D:\Code\CSharp\WinForm\os_tester_ui\os_tester_ui\bin\Debug\Interop.ADOX.dll
+D:\code\cshap\os_tester_ui\os_tester_ui\obj\Debug\os_tester_ui.csprojResolveAssemblyReference.cache
+D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\Newtonsoft.Json.dll
+D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\TouchSocket.Core.dll
+D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\TouchSocket.dll
+D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\Newtonsoft.Json.xml
+D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\TouchSocket.xml
+D:\code\cshap\os_tester_ui\os_tester_ui\bin\Debug\TouchSocket.Core.xml
